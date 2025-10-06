@@ -35,7 +35,7 @@ public class HeadInteraction {
                 int id = packet.getIntegers().read(0);
 
                 EnumWrappers.EntityUseAction action;
-                if (Utils.versionIsAfter(16)) {
+                if (Utils.MINECRAFT_VERSION_17.atOrAbove()) {
                     action = packet.getEnumEntityUseActions().readSafely(0).getAction();
                 } else {
                     action = packet.getEntityUseActions().readSafely(0);

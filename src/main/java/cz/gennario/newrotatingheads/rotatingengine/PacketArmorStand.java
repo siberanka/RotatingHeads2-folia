@@ -68,9 +68,9 @@ public class PacketArmorStand {
             if (isNoBaseplate()) {
                 flags += (byte) 0x08;
             }
-            if (Utils.versionIsAfter(16)) {
+            if (Utils.MINECRAFT_VERSION_17.atOrAbove()) {
                 PacketUtils.setMetadata(dataWatcher, 15, Byte.class, flags);
-            }else if(Utils.versionIsAfterOrEqual(15)) {
+            }else if(Utils.MINECRAFT_VERSION_15.atOrAbove()) {
                 PacketUtils.setMetadata(dataWatcher, 14, Byte.class, flags);
             } else {
                 PacketUtils.setMetadata(dataWatcher, 11, Byte.class, flags);
@@ -88,38 +88,38 @@ public class PacketArmorStand {
 
             if (headRotation != null) {
                 int id = 16;
-                if (Utils.versionIsBeforeOrEqual(16)) id = id - 1;
-                if (Utils.versionIsBeforeOrEqual(14)) id = 12;
+                if (!Utils.MINECRAFT_VERSION_17.atOrAbove()) id = id - 1;
+                if (!Utils.MINECRAFT_VERSION_15.atOrAbove()) id = 12;
                 PacketUtils.setMetadata(dataWatcher, id, Vector3F.getMinecraftClass(), new Vector3F((float) Math.toDegrees(headRotation.getX()), (float) Math.toDegrees(headRotation.getY()), (float) Math.toDegrees(headRotation.getZ())));
             }
             if (bodyRotation != null) {
                 int id = 17;
-                if (Utils.versionIsBeforeOrEqual(16)) id = id - 1;
-                if (Utils.versionIsBeforeOrEqual(14)) id = 13;
+                if (!Utils.MINECRAFT_VERSION_17.atOrAbove()) id = id - 1;
+                if (!Utils.MINECRAFT_VERSION_15.atOrAbove()) id = 13;
                 PacketUtils.setMetadata(dataWatcher, id, Vector3F.getMinecraftClass(), new Vector3F((float) Math.toDegrees(bodyRotation.getX()), (float) Math.toDegrees(bodyRotation.getY()), (float) Math.toDegrees(bodyRotation.getZ())));
             }
             if (leftArmRotation != null) {
                 int id = 18;
-                if (Utils.versionIsBeforeOrEqual(16)) id = id - 1;
-                if (Utils.versionIsBeforeOrEqual(14)) id = 14;
+                if (!Utils.MINECRAFT_VERSION_17.atOrAbove()) id = id - 1;
+                if (!Utils.MINECRAFT_VERSION_15.atOrAbove()) id = 14;
                 PacketUtils.setMetadata(dataWatcher, id, Vector3F.getMinecraftClass(), new Vector3F((float) Math.toDegrees(leftArmRotation.getX()), (float) Math.toDegrees(leftArmRotation.getY()), (float) Math.toDegrees(leftArmRotation.getZ())));
             }
             if (rightArmRotation != null) {
                 int id = 19;
-                if (Utils.versionIsBeforeOrEqual(16)) id = id - 1;
-                if (Utils.versionIsBeforeOrEqual(14)) id = 15;
+                if (!Utils.MINECRAFT_VERSION_17.atOrAbove()) id = id - 1;
+                if (!Utils.MINECRAFT_VERSION_15.atOrAbove()) id = 15;
                 PacketUtils.setMetadata(dataWatcher, id, Vector3F.getMinecraftClass(), new Vector3F((float) Math.toDegrees(rightArmRotation.getX()), (float) Math.toDegrees(rightArmRotation.getY()), (float) Math.toDegrees(rightArmRotation.getZ())));
             }
             if (leftArmRotation != null) {
                 int id = 20;
-                if (Utils.versionIsBeforeOrEqual(16)) id = id - 1;
-                if (Utils.versionIsBeforeOrEqual(14)) id = 16;
+                if (!Utils.MINECRAFT_VERSION_17.atOrAbove()) id = id - 1;
+                if (!Utils.MINECRAFT_VERSION_15.atOrAbove()) id = 16;
                 PacketUtils.setMetadata(dataWatcher, id, Vector3F.getMinecraftClass(), new Vector3F((float) Math.toDegrees(leftLegRotation.getX()), (float) Math.toDegrees(leftLegRotation.getY()), (float) Math.toDegrees(leftLegRotation.getZ())));
             }
             if (rightLegRotation != null) {
                 int id = 21;
-                if (Utils.versionIsBeforeOrEqual(16)) id = id - 1;
-                if (Utils.versionIsBeforeOrEqual(14)) id = 17;
+                if (!Utils.MINECRAFT_VERSION_17.atOrAbove()) id = id - 1;
+                if (!Utils.MINECRAFT_VERSION_15.atOrAbove()) id = 17;
                 PacketUtils.setMetadata(dataWatcher, id, Vector3F.getMinecraftClass(), new Vector3F((float) Math.toDegrees(rightLegRotation.getX()), (float) Math.toDegrees(rightLegRotation.getY()), (float) Math.toDegrees(rightLegRotation.getZ())));
             }
 
@@ -177,38 +177,38 @@ public class PacketArmorStand {
 
         if (headRotation != null) {
             int id = 16;
-            if (Utils.versionIsBeforeOrEqual(16)) id = id - 1;
-            if (Utils.versionIsBeforeOrEqual(14)) id = 12;
+            if (!Utils.MINECRAFT_VERSION_17.atOrAbove()) id = id - 1;
+            if (!Utils.MINECRAFT_VERSION_15.atOrAbove()) id = 12;
             PacketUtils.setMetadata(dataWatcher, id, Vector3F.getMinecraftClass(), new Vector3F((float) Math.toDegrees(headRotation.getX()), (float) Math.toDegrees(headRotation.getY()), (float) Math.toDegrees(headRotation.getZ())));
         }
         if (bodyRotation != null) {
             int id = 17;
-            if (Utils.versionIsBeforeOrEqual(16)) id = id - 1;
-            if (Utils.versionIsBeforeOrEqual(14)) id = 13;
+            if (!Utils.MINECRAFT_VERSION_17.atOrAbove()) id = id - 1;
+            if (!Utils.MINECRAFT_VERSION_15.atOrAbove()) id = 13;
             PacketUtils.setMetadata(dataWatcher, id, Vector3F.getMinecraftClass(), new Vector3F((float) Math.toDegrees(bodyRotation.getX()), (float) Math.toDegrees(bodyRotation.getY()), (float) Math.toDegrees(bodyRotation.getZ())));
         }
         if (leftArmRotation != null) {
             int id = 18;
-            if (Utils.versionIsBeforeOrEqual(16)) id = id - 1;
-            if (Utils.versionIsBeforeOrEqual(14)) id = 14;
+            if (!Utils.MINECRAFT_VERSION_17.atOrAbove()) id = id - 1;
+            if (!Utils.MINECRAFT_VERSION_15.atOrAbove()) id = 14;
             PacketUtils.setMetadata(dataWatcher, id, Vector3F.getMinecraftClass(), new Vector3F((float) Math.toDegrees(leftArmRotation.getX()), (float) Math.toDegrees(leftArmRotation.getY()), (float) Math.toDegrees(leftArmRotation.getZ())));
         }
         if (rightArmRotation != null) {
             int id = 19;
-            if (Utils.versionIsBeforeOrEqual(16)) id = id - 1;
-            if (Utils.versionIsBeforeOrEqual(14)) id = 15;
+            if (!Utils.MINECRAFT_VERSION_17.atOrAbove()) id = id - 1;
+            if (!Utils.MINECRAFT_VERSION_15.atOrAbove()) id = 15;
             PacketUtils.setMetadata(dataWatcher, id, Vector3F.getMinecraftClass(), new Vector3F((float) Math.toDegrees(rightArmRotation.getX()), (float) Math.toDegrees(rightArmRotation.getY()), (float) Math.toDegrees(rightArmRotation.getZ())));
         }
         if (leftArmRotation != null) {
             int id = 20;
-            if (Utils.versionIsBeforeOrEqual(16)) id = id - 1;
-            if (Utils.versionIsBeforeOrEqual(14)) id = 16;
+            if (!Utils.MINECRAFT_VERSION_17.atOrAbove()) id = id - 1;
+            if (!Utils.MINECRAFT_VERSION_15.atOrAbove()) id = 16;
             PacketUtils.setMetadata(dataWatcher, id, Vector3F.getMinecraftClass(), new Vector3F((float) Math.toDegrees(leftLegRotation.getX()), (float) Math.toDegrees(leftLegRotation.getY()), (float) Math.toDegrees(leftLegRotation.getZ())));
         }
         if (rightLegRotation != null) {
             int id = 21;
-            if (Utils.versionIsBeforeOrEqual(16)) id = id - 1;
-            if (Utils.versionIsBeforeOrEqual(14)) id = 17;
+            if (!Utils.MINECRAFT_VERSION_17.atOrAbove()) id = id - 1;
+            if (!Utils.MINECRAFT_VERSION_15.atOrAbove()) id = 17;
             PacketUtils.setMetadata(dataWatcher, id, Vector3F.getMinecraftClass(), new Vector3F((float) Math.toDegrees(rightLegRotation.getX()), (float) Math.toDegrees(rightLegRotation.getY()), (float) Math.toDegrees(rightLegRotation.getZ())));
         }
 

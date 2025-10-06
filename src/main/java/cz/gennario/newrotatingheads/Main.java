@@ -58,7 +58,7 @@ public final class Main extends JavaPlugin {
         new Metrics(this, 18169)
                 .addCustomChart(new Metrics.SingleLineChart("heads_count", () -> getHeadsList().size()));
 
-        if (Utils.versionIsBeforeOrEqual(13)) {
+        if (!Utils.MINECRAFT_VERSION_14.atOrAbove()) {
             pluginUpdater.sendErrorOnLoadMessage("Unsupported server version. Use version from 1.14 to Latest.");
 
             Bukkit.getPluginManager().disablePlugin(this);

@@ -11,7 +11,7 @@ public class TextComponentUtils {
 
     public static TextComponent create(String message) {
         TextComponent textComponent = null;
-        if(Integer.parseInt(Utils.getMinecraftVersion(Bukkit.getServer()).split("\\.")[1]) >= 16) {
+        if(Utils.MINECRAFT_VERSION_16.atOrAbove()) {
             textComponent = new TextComponent(new ComponentBuilder().appendLegacy(message).create());
         }else {
             textComponent = new TextComponent(message);

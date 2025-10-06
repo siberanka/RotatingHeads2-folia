@@ -1,5 +1,6 @@
 package cz.gennario.newrotatingheads.utils;
 
+import com.comphenix.protocol.utility.MinecraftVersion;
 import com.comphenix.protocol.wrappers.Pair;
 import cz.gennario.newrotatingheads.Main;
 import cz.gennario.newrotatingheads.utils.centermessage.CenterMessage;
@@ -18,6 +19,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public final class Utils {
+    public static MinecraftVersion MINECRAFT_VERSION_14 = MinecraftVersion.VILLAGE_UPDATE;
+    public static MinecraftVersion MINECRAFT_VERSION_15 = MinecraftVersion.BEE_UPDATE;
+    public static MinecraftVersion MINECRAFT_VERSION_16 = MinecraftVersion.NETHER_UPDATE;
+    public static MinecraftVersion MINECRAFT_VERSION_17 = MinecraftVersion.CAVES_CLIFFS_1;
 
     public static String colorize(Player player, String string) {
         String playerName = "%player%";
@@ -68,37 +73,6 @@ public final class Utils {
         }
 
         return list;
-    }
-
-    public static String getMinecraftVersion(Server server) {
-        String version = server.getVersion();
-        int start = version.indexOf("MC: ") + 4;
-        int end = version.length() - 1;
-        return version.substring(start, end);
-    }
-
-    public static boolean isOldVersion() {
-        return Integer.parseInt(Utils.getMinecraftVersion(Bukkit.getServer()).split("\\.")[1]) < 13;
-    }
-
-    public static boolean versionIs(int version) {
-        return Integer.parseInt(Utils.getMinecraftVersion(Bukkit.getServer()).split("\\.")[1]) == version;
-    }
-
-    public static boolean versionIsAfter(int version) {
-        return Integer.parseInt(Utils.getMinecraftVersion(Bukkit.getServer()).split("\\.")[1]) > version;
-    }
-
-    public static boolean versionIsBefore(int version) {
-        return Integer.parseInt(Utils.getMinecraftVersion(Bukkit.getServer()).split("\\.")[1]) < version;
-    }
-
-    public static boolean versionIsBeforeOrEqual(int version) {
-        return Integer.parseInt(Utils.getMinecraftVersion(Bukkit.getServer()).split("\\.")[1]) <= version;
-    }
-
-    public static boolean versionIsAfterOrEqual(int version) {
-        return Integer.parseInt(Utils.getMinecraftVersion(Bukkit.getServer()).split("\\.")[1]) >= version;
     }
 
 
