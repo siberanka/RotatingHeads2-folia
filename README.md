@@ -6,6 +6,7 @@
 100% customizable free minecraft plugin, that adds rotating entities, heads and armorstands to your minecraft server!<br><br>
 
 Unofficial fix for versions 1.20.6+ - 1.20.3 by Len_137 from GameDreams.eu
+<br>
 Unofficial fix for versions 1.21.4+ by libraryaddict
 
 </div><br>
