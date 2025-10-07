@@ -515,8 +515,8 @@ public class RotatingHead {
             if(hologram != null) {
                 hologram.move();
             }
-        }catch (Exception e) {
-
+        } catch (Exception e) {
+            e.printStackTrace();
         }
     }
 

@@ -23,6 +23,7 @@ public final class Utils {
     public static MinecraftVersion MINECRAFT_VERSION_15 = MinecraftVersion.BEE_UPDATE;
     public static MinecraftVersion MINECRAFT_VERSION_16 = MinecraftVersion.NETHER_UPDATE;
     public static MinecraftVersion MINECRAFT_VERSION_17 = MinecraftVersion.CAVES_CLIFFS_1;
+    public static MinecraftVersion MINECRAFT_VERSION_21_2 = MinecraftVersion.v1_21_2;
 
     public static String colorize(Player player, String string) {
         String playerName = "%player%";
